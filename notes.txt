@@ -1,0 +1,6 @@
+1. "type":"module" for import express
+
+2. "main": "main.js" index.js to main.js
+
+3. "server":"nodemon main.js", for npm run server and auto refesh
+
