@@ -1,13 +1,20 @@
-import { model, Schema } from "mongoose";
+import { model, Schema, Types } from "mongoose";
 
 
-// create your schema(table)
+// create your schema(column)
 const schema = new Schema({
-    title: String,
-    desc: String,
+    title: {
+        type : String,
+        required : true,
+        unique : true,
+    },
+    desc: {
+        type : String,
+        required : true,
+    },
 })
 
-// create your model(DB)
+// create your model(table)
 const Movie = model("Movie",schema)
 
 export default Movie;

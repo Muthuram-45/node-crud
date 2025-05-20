@@ -1,11 +1,13 @@
 import express from 'express'
-import { MovieCreate, Moviedelete, MovieIndex, MovieUpdate } from '../Controllers/movies.controller.js';
+import { MovieCreate, Moviedelete, MovieDetails, MovieIndex, MovieUpdate } from '../Controllers/movies.controller.js';
 
 const router = express.Router()
 
 // Crud
 
 router.get('/', MovieIndex);
+
+router.get('/:id',MovieDetails)
 
 router.post('/',MovieCreate);
 
