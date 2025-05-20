@@ -1,5 +1,6 @@
 import express from "express";
 import movieRoutes from  "./Routes/movies.route.js"
+import connectDB from "./lib/db.js";
 
 const app = express()
 const port = 3000
@@ -7,6 +8,9 @@ const port = 3000
 app.get('/', (req, res) => {
   res.json({ msg:"Hello World!" });
 })
+
+// connect DB
+connectDB();
 
 
 // client -middleware - server
