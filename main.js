@@ -9,6 +9,12 @@ app.get('/', (req, res) => {
   res.json({ msg:"Hello World!" });
 })
 
+
+// Data understanding Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended : true}));
+
+
 // connect DB
 connectDB();
 
